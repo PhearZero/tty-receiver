@@ -1,0 +1,25 @@
+{
+  "name": "tty-receiver",
+  "version": "1.0.0",
+  "description": "",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "test": "echo \"Error: no test specified\" && exit 0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PhearZero/tty-receiver.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/PhearZero/tty-receiver/issues"
+  },
+  "homepage": "https://github.com/PhearZero/tty-receiver#readme",
+  "devDependencies": {
+    "typescript": "^5.0.4",
+    "xterm": "^5.1.0"
+  }
+}
