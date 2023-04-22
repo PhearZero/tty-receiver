@@ -1,4 +1,4 @@
-import { Terminal, IEvent, IDisposable } from "xterm";
+import {Terminal, IEvent, IDisposable, ITerminalOptions} from "xterm";
 
 import base64 from './base64';
 
@@ -11,7 +11,7 @@ export class TTYReceiver {
     private xterminal: Terminal;
     private containerElement: HTMLElement;
 
-    constructor(wsAddress: string, container: HTMLDivElement) {
+    constructor(wsAddress: string, container: HTMLDivElement, options?: ITerminalOptions) {
         console.log("Opening WS connection to ", wsAddress)
         const connection = new WebSocket(wsAddress);
 
@@ -23,6 +23,7 @@ export class TTYReceiver {
             fontSize: 12,
             letterSpacing: 0,
             fontFamily: 'SauceCodePro MonoWindows, courier-new, monospace',
+            ...options,
         });
 
         this.containerElement = container;
